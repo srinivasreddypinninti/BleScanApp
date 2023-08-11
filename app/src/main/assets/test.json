@@ -1,0 +1,5 @@
+{
+  "score": "70",
+  "positives": "Cameras are installed (+10),  CO sensor installed (+10), Door lock installed (+20)",
+  "Negatives": "Panel is connected to unsecure wifi (-10), Device software is not up-to-date (-20)"
+} 

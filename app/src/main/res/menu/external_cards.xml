@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/cards"
+        android:title="Cards">
+    </item>
+<!--    <item-->
+<!--        android:id="@+id/save"-->
+<!--        android:title="Save">-->
+
+<!--    </item>-->
+    <!--<item
+        android:id="@+id/menu_powerG"
+        android:title="PowerG">
+
+    </item>
+
+    <item
+        android:id="@+id/menu_zigb"
+        android:title="ZigB">
+
+    </item>
+
+    <item
+        android:id="@+id/menu_rf"
+        android:title="SRF">
+
+    </item>-->
+
+</menu>

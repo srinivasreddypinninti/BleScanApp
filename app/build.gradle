@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 32
+    buildToolsVersion '32.0.0'
+
+    defaultConfig {
+        applicationId "com.example.appit"
+        minSdkVersion 24
+        targetSdkVersion 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+    }
+}
+
+dependencies {
+
+
+//    implementation 'androidx.media2:media2-exoplayer:1.0.3'
+    def preference_version = "1.2.0"
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+//    implementation 'com.github.mikephil:MPAndroidChart-v3.0.3'
+
+    //zxing qr code
+    implementation 'com.google.zxing:core:3.4.1'
+    implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+
+
+    implementation "androidx.preference:preference:$preference_version"
+
+    // For Card view
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    //
+//    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+// Chart and graph library
+//    implementation 'com.github.blackfizz:eazegraph:1.2.5l@aar'
+//    implementation 'com.nineoldandroids:library:2.4.0'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.+'
+    testImplementation 'org.mockito:mockito-core:2.19.0'
+    testImplementation 'org.json:json:20140107'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+
+
+//    implementation "androidx.media3:media3-exoplayer-rtsp:1.0.1"
+
+//    compile project(':libs:MPChartLib')
+
+    implementation "com.google.android.exoplayer:exoplayer-rtsp:2.17.1"
+
+}

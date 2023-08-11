@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.appit">
+
+    <!-- <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" /> -->
+    <!--
+<uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.bluetooth" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" /> <!-- <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" -->
+    <!-- tools:ignore="ProtectedPermissions" /> -->
+    <!--
+<uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> &lt;!&ndash; <uses-permission android:name="Manifest.permission.ACCESS_FINE_LOCATION" /> &ndash;&gt;
+    <uses-permission android:name="Manifest.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+    -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppIt"
+        android:usesCleartextTraffic="true">
+        <service
+            android:name=".fragment.service.LogService"
+            android:enabled="true"
+            android:exported="false">
+
+            <intent-filter>
+                <action android:name="com.example.appit.fragment.service.LogService"></action>
+            </intent-filter>
+
+        </service>
+
+        <activity android:name=".fragment.ble.DeviceScanActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".fragment.ble.QRCodeScanActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".fragment.ble.QRCodeGeneratorActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".fragment.ble.AdvertiserActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".fragment.ble.DeviceControlActivity" />
+
+        <service android:name=".fragment.ble.PeripheralAdvertiseService" />
+        <service android:name=".fragment.ble.BLEClientService" />
+
+        <activity android:name=".fragment.multithtread.PriceUpdateActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+
+        <service
+            android:name=".fragment.service.DownloadService"
+            android:exported="true" />
+        <service
+            android:name=".fragment.service.DownloadBoundService"
+            android:exported="true" />
+
+        <activity android:name=".fragment.service.DownloadActivity">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+    </application>
+
+</manifest>
