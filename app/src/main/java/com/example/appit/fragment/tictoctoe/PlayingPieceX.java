@@ -1,0 +1,7 @@
+package com.example.appit.fragment.tictoctoe;
+
+public class PlayingPieceX extends PlayingPiece{
+    public PlayingPieceX() {
+        super(PieceType.X);
+    }
+}

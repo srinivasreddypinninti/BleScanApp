@@ -1,5 +1,5 @@
 package com.example.appit.fragment.tictoctoe;
 
-public enum Piece {
+public enum PieceType {
     X,O
 }
